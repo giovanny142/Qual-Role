@@ -6,7 +6,7 @@ export default function Header() {
 
     return (
         <SafeAreaView style={styles.container}>
-            <StatusBar backgroundColor="#6666eb" barStyle="light-content" />
+            <StatusBar backgroundColor="#56070c" barStyle="light-content" />
                 <TouchableOpacity style={styles.left}>
                     <MaterialCommunityIcons name={"menu"} size={35} color="#ffffff" />
                 </TouchableOpacity>
@@ -20,7 +20,7 @@ export default function Header() {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#6666eb',
+        backgroundColor: '#56070c',
         padding: '4%',
         flexDirection: 'row',
         alignItems: 'center',

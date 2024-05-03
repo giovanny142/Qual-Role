@@ -11,9 +11,9 @@ export default function SearchBar() {
                     placeholder="Faça sua busca aqui"
                     fontSize="md"
                     InputLeftElement={
-                        <MaterialIcons name="search" size={24} color="#ffffff" style={{ marginLeft: 5, backgroundColor: '#6666eb',
+                        <MaterialIcons name="search" size={24} color="#ffffff" style={{ marginLeft: 5, backgroundColor: '#56070c',
                         borderRadius: 999,
-                        marginRight: 10, }} />
+                        marginRight: 3, }} />
                     }
                     _light={{
                         placeholderTextColor: "gray",
@@ -26,13 +26,11 @@ export default function SearchBar() {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#ebebeb',
+        backgroundColor: '#dbdada',
     },
     input: {
-        borderColor: '#6666eb',
-        borderWidth: 1.4,
-        borderRadius: 5,
-        marginLeft: 12,
-        marginRight: 12
+        borderColor: '#5f0fe5',
+        // borderWidth: 1.4,
+        // borderRadius: 5,
     }
 });
