@@ -1,9 +1,9 @@
 import { Text, View } from "native-base";
 import { StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
-import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
+import { AntDesign, MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
 import * as Animatable from 'react-native-animatable';
-import LinearGradient from "react-native-linear-gradient";
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 export const ListRestaurants = ({ ...props }: any) => {
     const [favoriteButtonPressed, setFavoriteButtonPressed] = useState(false);
@@ -29,8 +29,9 @@ export const ListRestaurants = ({ ...props }: any) => {
                                     <Text style={styles.description}>Lugares disponíveis:</Text>
                                     <View style={styles.detailsCapacity}>
                                         <Text style={styles.peopleCount}>10</Text>
-                                        <MaterialCommunityIcons style={{ alignSelf: 'center', marginLeft: width * 0.01, color: 'black' }}
-                                            name={"chair-school"} size={width * 0.04} />
+                                        <Icon name="table-bar" size={width * 0.036} style={{ alignSelf: 'center', marginLeft: width * 0.01, color: 'black' }}/>
+                                        {/* <MaterialCommunityIcons style={{ alignSelf: 'center', marginLeft: width * 0.01, color: 'black' }}
+                                            name={"chair-school"} size={width * 0.04} /> */}
                                     </View>
                                 </View>
                             </View>
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     },
     detailsCapacity: {
         flexDirection: 'row',
-        marginLeft: width * 0.01
+        marginLeft: width * 0.01,
     },
     textContainer: {
         marginLeft: width * 0.01,
