@@ -74,13 +74,13 @@ export default function HomeScreen() {
   return (
     <VStack flex={1}>
       <Header />
-        <SearchBar />
-        <FlatList
+      <SearchBar />
+      <FlatList
         style={{backgroundColor:'#dbdada'}}
-          data={listRestaurants}
-          keyExtractor={(item) => item.id}
-          renderItem={renderItem}
-        />
+        data={listRestaurants}
+        keyExtractor={(item) => item.id}
+        renderItem={renderItem}
+      />
     </VStack>
   );
 }
