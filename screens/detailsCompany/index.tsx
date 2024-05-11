@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { View, Text, Image, StyleSheet, Dimensions, StatusBar } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import Carousel from 'react-native-snap-carousel';
 import { ImageGallery } from '@georstat/react-native-image-gallery';
-import { Button, VStack } from 'native-base';
+import { Button, VStack, Text, Divider, Stack, Heading, HStack } from 'native-base';
+import React, { useState } from 'react';
+import { Dimensions, Image, StyleSheet, View } from 'react-native';
+import Carousel from 'react-native-snap-carousel';
 import Header from '../../components/listRestaurants/header';
+import DetailsCompany from '../../components/detailsCompany';
 
 const { width } = Dimensions.get('window');
 const ITEM_WIDTH = width * 0.65;
@@ -46,11 +46,8 @@ export const DetailsCompanyScreen = () => {
                     sliderWidth={width}
                     itemWidth={width * 0.75}
                 />
-                {/* <Text style={{ fontSize: 60 }}>oi</Text> */}
             </View>
-            <View style={{ backgroundColor: 'red', borderTopRightRadius: 100 }}>
-                <Text>oi</Text>
-            </View>
+            <DetailsCompany />
         </VStack>
     );
 };
@@ -60,12 +57,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#dbdada',
     },
     safeArea: {
-        backgroundColor: 'white',
+        backgroundColor: '#dbdada',
     },
     container: {
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#dbdada',
     },
     image: {
         width: ITEM_WIDTH * 1.15,

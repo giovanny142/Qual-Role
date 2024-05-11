@@ -84,10 +84,3 @@ export default function HomeScreen() {
     </VStack>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    borderBlockColor: 'green'
-  }
-});
