@@ -1,14 +1,14 @@
-import { ImageGallery } from '@georstat/react-native-image-gallery';
-import { Button, VStack, Text, Divider, Stack, Heading, HStack } from 'native-base';
+import { Divider, HStack, Heading, Stack, Text } from 'native-base';
 import React, { useState } from 'react';
-import { Dimensions, Image, StyleSheet, View } from 'react-native';
-import Carousel from 'react-native-snap-carousel';
-import Header from '../../components/listRestaurants/header';
+import { Dimensions, StyleSheet, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const { width } = Dimensions.get('window');
 const ITEM_WIDTH = width * 0.65;
 
 export const DetailsCompany = () => {
+    const [showWorkHours, setShowWorkHours] = useState(false);
 
     return (
         <View >
@@ -20,23 +20,48 @@ export const DetailsCompany = () => {
                     <Text bold fontSize="2xl">Seu Rosa Bar3 pizarria</Text>
                 </View>
                 <Divider alignSelf={'center'} width={'89%'} my={2} />
-                <Stack p="5" space={3} >
-                    <Stack space={2}>
-                        <Heading size="md">
-                            Rua 14 de julho, 491
+                <Stack p="4" space={3} >
+                    <Stack  >
+                        <Heading size="sm" >
+                            Rua Doutor Manuel Tomás Teixeira de Souza, 449
                         </Heading>
-                        <Text fontSize="sm" _light={{
-                            color: "violet.500"
-                        }} _dark={{
-                            color: "violet.400"
-                        }} fontWeight="500" >
-                            Aberto agora
-                        </Text>
+                        <Heading size="xs">Tocantins - 38415-270</Heading>
+                        <Text>(34) 9 9772-7430</Text>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: width * 0.035 }}>
+                            <Text fontSize="sm" _light={{
+                                color: "#eb0e15"
+                            }} _dark={{
+                                color: "#eb0e15"
+                                // #30db39
+                            }} fontWeight="500" >
+                                Fechado
+                            </Text>
+                            <TouchableOpacity onPress={() => setShowWorkHours(!showWorkHours)}>
+                                {showWorkHours ?
+                                    <Icon name="keyboard-arrow-up" size={width * 0.06} style={{ color: 'black' }} />
+                                    :
+                                    <Icon name="keyboard-arrow-down" size={width * 0.06} style={{ color: 'black' }} />}
+
+                            </TouchableOpacity>
+                        </View>
+                        <View>
+                            {showWorkHours ?
+                                <View>
+                                    <Text>Segunda-feira - 08:00 às 23:59</Text>
+                                    <Text>Terça-feira - 08:00 às 23:59</Text>
+                                    <Text>Quarta-feira - 08:00 às 23:59</Text>
+                                    <Text>Quinta-feira - 08:00 às 23:59</Text>
+                                    <Text>Sexta-feira - 08:00 às 23:59</Text>
+                                </View>
+                                :
+                                <Text>Quinta-feira - 08:00 às 23:59</Text>
+                            }
+                        </View>
                     </Stack>
-                    <Heading size="sm">
+                    <Heading marginTop={1} marginBottom={-2} size="sm">
                         Descrição:
                     </Heading>
-                    <Text fontSize="md" >
+                    <Text fontSize="sm" >
                         Venha conhecer o melhor bar universitário de Uerlândia!
                         Happy hour toda sexta com direito a chopp pela metade do preço.
                     </Text>
