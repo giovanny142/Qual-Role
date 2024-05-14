@@ -1,7 +1,6 @@
 import { Divider, HStack, Heading, Stack, Text } from 'native-base';
 import React, { useState } from 'react';
-import { Dimensions, StyleSheet, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Dimensions, StyleSheet, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const { width } = Dimensions.get('window');

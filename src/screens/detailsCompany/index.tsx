@@ -3,7 +3,7 @@ import { Button, VStack, Text, Divider, Stack, Heading, HStack } from 'native-ba
 import React, { useState } from 'react';
 import { Dimensions, Image, StyleSheet, View } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
-import Header from '../../components/listRestaurants/header';
+import Header from '../../components/listCompany/header';
 import DetailsCompany from '../../components/detailsCompany';
 
 const { width } = Dimensions.get('window');

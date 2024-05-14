@@ -20,7 +20,7 @@ export default function SearchBar() {
                     fontSize="md"
                     InputLeftElement={
                         <MaterialIcons name="search" size={24} color="#ffffff" style={{
-                            marginLeft: 5, backgroundColor: '#56070c',
+                            marginLeft: 5, backgroundColor: '#700f12',
                             borderRadius: 999,
                             marginRight: 3,
                         }} />
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#dbdada',
     },
     itemContainer: {
-        borderRadius: 50,
+        borderRadius: 5,
         marginRight: 5,
         marginTop: 8,
         paddingHorizontal: 5,
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     selectedItem: {
-        backgroundColor: '#56070c',
+        backgroundColor: '#700f12',
     },
     itemText: {
         color: "#4d4c4c",

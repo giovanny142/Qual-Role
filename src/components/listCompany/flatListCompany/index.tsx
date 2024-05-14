@@ -1,11 +1,12 @@
 import { Text, View } from "native-base";
-import { StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
+import { StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
 import { AntDesign, MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
 import * as Animatable from 'react-native-animatable';
 import Icon from 'react-native-vector-icons/MaterialIcons'
+import {  } from "react-native-gesture-handler";
 
-export const ListRestaurants = ({ ...props }: any) => {
+export const ListCompanies = ({ ...props }: any) => {
     const [favoriteButtonPressed, setFavoriteButtonPressed] = useState(false);
 
     return (
@@ -41,7 +42,7 @@ export const ListRestaurants = ({ ...props }: any) => {
                             <TouchableOpacity onPress={() => setFavoriteButtonPressed(!favoriteButtonPressed)}>
                                 {favoriteButtonPressed ?
                                     <Animatable.View animation="bounceIn">
-                                        <MaterialCommunityIcons name={"heart"} size={24} color="#56070c" />
+                                        <MaterialCommunityIcons name={"heart"} size={24} color="#941317" />
                                     </Animatable.View>
                                     :
                                     <MaterialCommunityIcons name={"heart-outline"} size={24} color="#dbdbdb" />

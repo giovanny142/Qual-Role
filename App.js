@@ -1,11 +1,13 @@
 import { Box, NativeBaseProvider } from 'native-base';
 import { StyleSheet, Text, View } from 'react-native';
-import AppNavigator from './navigator/AppNavigator';
+import AppNavigator from './src/navigator/AppNavigator';
+import { Routes } from './src/routes';
 
 export default () =>  {
   return (
     <NativeBaseProvider>
-        <AppNavigator />
+        {/* <AppNavigator /> */}
+        <Routes/>
     </NativeBaseProvider>
   );
 }

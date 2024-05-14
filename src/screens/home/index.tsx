@@ -1,9 +1,9 @@
 import { View, SafeAreaView, StyleSheet, StatusBar, Text, ListRenderItemInfo } from 'react-native';
-import { FlatList, VStack } from 'native-base';
-import SearchBar from '../../components/listRestaurants/searchBar';
-import Header from '../../components/listRestaurants/header';
-import { ListRestaurants } from '../../components/listRestaurants/flatListRestaurant';
-import { IRestaurant } from '../../interfaces/IRestaurant';
+import { FlatList, NativeBaseProvider, VStack } from 'native-base';
+import SearchBar from '../../components/listCompany/searchBar';
+import Header from '../../components/listCompany/header';
+import { ListCompanies } from '../../components/listCompany/flatListCompany';
+import { IRestaurant } from '../../../interfaces/IRestaurant';
 
 export default function HomeScreen() {
 
@@ -67,7 +67,7 @@ export default function HomeScreen() {
   ]
 
   function renderItem({ item }: ListRenderItemInfo<IRestaurant>) {
-    const list = <ListRestaurants {...item} />
+    const list = <ListCompanies {...item} />
     return list
   }
 
@@ -76,7 +76,7 @@ export default function HomeScreen() {
       <Header />
       <SearchBar />
       <FlatList
-        style={{backgroundColor:'#dbdada'}}
+        style={{ backgroundColor: '#dbdada' }}
         data={listRestaurants}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
