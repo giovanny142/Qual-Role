@@ -19,7 +19,7 @@ const GradientTabBar = (props) => {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        height: 40, // Defina a altura da barra de navegação
+        height: 40, 
     },
 });
 
